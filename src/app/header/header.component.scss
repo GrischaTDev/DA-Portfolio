@@ -1,19 +1,19 @@
 @import '../../styles.scss';
 
 header {
+    @include dFlex($jc: space-between);
     padding: 37px 100px;
     font-size: 23px;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    background-color: green;
+    z-index: 999;
     >img {
-        height: 46px;
+        height: 40px;
     }
     >nav {
-        display: flex;
-        gap: 30px;
+        @include dFlex($gap: 50px);
         >a {
+            transition: 0.35s color;
             &:hover {
-                transition: 0.35s color;
                 color: $orange;
                 border-bottom: 2px $red;
             }
