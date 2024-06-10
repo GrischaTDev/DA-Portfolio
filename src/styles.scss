@@ -1,4 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+// Main colors
+$fonts: #fff;
+$background: #141D2F;
+$red: #ff4647;
+$orange: #fa7902;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { 
+    height: 100%; 
+}
+
+body {
+    margin: 0; 
+    color: $fonts;
+    background-color: $background;
+    font-family: 'Poppins', "Helvetica Neue", sans-serif; 
+}
+
+// a tag style
+a {
+    text-decoration: none;
+    color: $fonts;
+}
+
+@mixin flex-box($justify, $align, $flex-d, $gap) {
+    display: flex;
+    flex-direction: $flex-d;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+  }
+
+/* poppins-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/poppins-regular.woff2') format('woff2');
+  }
