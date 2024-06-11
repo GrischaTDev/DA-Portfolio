@@ -1,0 +1,46 @@
+@import '../../styles.scss';
+
+.about-me {
+    width: 100%;
+    padding: 0 140px;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    @include dFlex($jc:space-between);
+}
+
+.about-me-text {
+    width: 600px;
+    @include dFlex($ai: flex-start, $fd:column, $gap: 50px);
+    >span {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 16px;
+    }
+
+    >.icon-text {
+        font-size: 16px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        @include dFlex($fd:row, $gap: 20px);
+        & img:hover {
+            transform: scale(1.3);
+            transition: 0.35s transform ease-in-out;
+        }
+    }
+}
+
+.kreis-foto {
+    position: absolute;
+    right: 0;
+    @include dFlex();
+    >.border {
+        height: 4px;
+        width: 300px;
+        background-color: $orange;
+    }
+}
+
+.about-shape {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
