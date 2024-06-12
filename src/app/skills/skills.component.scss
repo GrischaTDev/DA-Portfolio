@@ -9,10 +9,15 @@
     >.skill {
         width: 120px;
         @include dFlex($fd: column, $gap: 10px);
-        transition: transform 300ms ease-in-out;
+        >img {
+            transition: transform 300ms ease-in-out;
+            &:hover {
+                color: $red;
+                transform: translateY(-10px);
+            }
+        } 
         &:hover {
             color: $red;
-            transform: translateY(-10px);
         }
     }
 }
