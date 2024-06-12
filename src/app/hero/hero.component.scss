@@ -28,14 +28,12 @@
     >.name-text {
         @include dFlex($fd:row);
         >.name-title h1 {
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
             font-size: 90px;
             font-weight: bold;
             line-height: 108px;
             margin: 0;
         }
         >.name-title h2 {
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
             font-size: 60px;
             line-height: 69px;
             font-weight: 400;
@@ -44,7 +42,6 @@
             margin: 0;
         }
         >.side-text {
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
             font-size: 42px;
             display: inline-block;
             transform: rotate(-90deg);
@@ -52,7 +49,6 @@
     }
 
     >button {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
         width: 250px;
         padding: 20px 30px;
         background-color: $orange;
