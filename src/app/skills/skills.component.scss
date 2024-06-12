@@ -1,2 +1,40 @@
 @import '../../styles.scss';
 
+.skills-container {
+    display: flex;
+    gap: 90px;
+    flex-flow: initial;
+    flex-wrap: wrap;
+    max-width: 750px;
+    >.skill {
+        width: 120px;
+        @include dFlex($fd: column, $gap: 10px);
+        transition: transform 300ms ease-in-out;
+        &:hover {
+            color: $red;
+            transform: translateY(-10px);
+        }
+    }
+}
+
+.my-skills-right {
+    @include dFlex($ai:flex-end, $fd:column, $gap: 50px);
+    width: 590px;
+    text-align: right;
+    >.skills-title {
+        @include dFlex();
+        >.skills-border {
+            position: absolute;
+            right: 0;
+            height: 5px;
+            width: 100px;
+            background-color: $red;
+        }
+    }
+
+    >.skills-btn {
+        width: 100%;
+        @include dFlex();
+    }
+}
+

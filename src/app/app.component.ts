@@ -11,7 +11,7 @@ import { FooterComponent } from "./footer/footer.component";
     imports: [
       RouterOutlet, 
       HeaderComponent, 
-      FooterComponent
+      FooterComponent,
     ]
 })
 export class AppComponent {

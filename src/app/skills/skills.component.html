@@ -1,13 +1,24 @@
 <section class="section-styles">
-    <div>
-        <div>
-            <img src="" alt="">
-            <span>Angular</span>
+
+
+    <div class="skills-container">
+        <div class="skill" *ngFor="let skill of skills">
+            <img [src]="'assets/img/skills/' + skill.icon + '.svg'" [alt]="skill.name" />
+            <div> {{ skill.name }}</div>
         </div>
     </div>
-    <div>
-        <h2>My skills</h2>
-        <div class="skills-border"></div>
-        <button>Kontakt aufnehmen</button>
+
+
+    <div class="my-skills-right">
+        <div class="skills-title">
+            <h2>Meine Skills</h2>
+            <div class="skills-border"></div>
+        </div>
+        <span>Ich habe meine Fähigkeiten im Bereich der Frontend-Entwicklung ausgebaut, die es mir ermöglicht haben,
+            verschiedene reale Projekte zu erstellen.</span>
+        <div class="skills-btn">
+            <button>Kontakt aufnehmen</button>
+        </div>
     </div>
+
 </section>
