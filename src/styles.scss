@@ -27,6 +27,20 @@ h1, h2 {
   line-height: 108px;
   margin: 0;
 }
+h3 {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: $red;
+  margin: 0;
+}
+
+h4 {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-size: 23px;
+  color: $orange;
+  margin: 0;
+}
 
 a {
   text-decoration: none;
@@ -50,8 +64,8 @@ a {
   @include dFlex($jc: space-between);
 }
 
-button {
-  width: auto;
+.primary-btn {
+  width: 200px;
   padding: 15px 30px;
   background-color: $orange;
   color: $fonts;
@@ -66,6 +80,28 @@ button {
       cursor: pointer;
       padding: 15px 50px;
       background-color: $red;
+
+  }
+}
+
+.secondary-btn {
+  width: auto;
+  padding: 15px 30px;
+  color: $fonts;
+  font-size: 23px;
+  line-height: 27.6px;
+  border-radius: 10px;
+  border: none;
+  outline: 1px solid $orange;
+  background-color: rgba(255, 255, 255, 0);
+
+  transition: 0.35s padding ease-in-out;
+
+  &:hover {
+      cursor: pointer;
+      padding: 15px 50px;
+      border: none;
+      background-color: $orange;
 
   }
 }

@@ -1,12 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
-interface Skill {
-  name: string;
-  icon: string;
-  hovered: boolean; 
-}
-
 @Component({
   selector: 'app-skills',
   standalone: true,

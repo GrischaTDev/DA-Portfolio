@@ -1,0 +1,78 @@
+@import '../../styles.scss';
+
+.section-styles {
+    flex-direction: column;
+}
+
+.portfolio-title {
+    width: 100%;
+    @include dFlex($fd: column, $gap: 40px);
+
+    >.title-and-border {
+        position: absolute;
+        right: 0;
+        @include dFlex($fd: row, $gap: 40px);
+
+        >.border-left {
+            height: 5px;
+            width: 80px;
+            background-color: $red;
+        }
+
+        >.border-right {
+
+            height: 5px;
+            width: calc((100vw - 1920px) / 2 + 718px);
+            right: 0;
+            background-color: $red;
+        }
+    }
+
+    >span {
+        padding-top: 164px;
+    }
+}
+
+.portfolio-content {
+    width: 100%;
+    margin-top: 120px;
+    @include dFlex($fd: row, $gap: 40px);
+
+    >.portfolio-left {
+        margin: 0 140px;
+        height: 440px;
+    }
+
+    >.portfolio-right {
+        width: 30%;
+        @include dFlex($ai: flex-start, $fd: column, $gap: 10px);
+
+        >.portfolio-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 100px;
+        }
+    }
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.portfolio-shape {
+    box-sizing: border-box;
+    position: absolute;
+    transform: scaleX(-1);
+    right: 0;
+    bottom: 30%;
+    z-index: -10;
+}
+
+.portfolio-shape2 {
+    box-sizing: border-box;
+    position: absolute;
+    transform: scaleX(-1);
+    left: 0;
+    bottom: 0%;
+    z-index: -10;
+}

@@ -1,0 +1,36 @@
+@import '../../styles.scss';
+
+.contact-title {
+    width: 30%;
+    height: 600px;
+    @include dFlex($jc: flex-start, $fd: column, $gap: 40px);
+}
+
+.contact-form {
+    margin-top: 100px;
+    width: 70%;
+    @include dFlex($fd: column, $gap: 20px);
+    >input {
+        width: 50%;
+        height: 40px;
+        padding: 10px;
+        border-radius: 10px;
+        border-color: $red;
+        background-color: unset;
+
+        &:hover {
+            border-color: $orange;
+        }
+    }
+    >textarea {
+        width: 50%;
+        padding: 10px;
+        border-radius: 10px;
+        border-color: $red;
+        background-color: unset;
+
+        &:hover {
+            border-color: $orange;
+        }
+    }
+}
