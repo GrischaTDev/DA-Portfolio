@@ -12,10 +12,11 @@
         </div>
     </div>
 
-    <form class="contact-form" action="">
-        <input type="text" name="" placeholder="Ihr Name" id="">
-        <input type="email" name="" placeholder="Ihre E-Mail" id="">
-        <textarea name="" placeholder="Ihre Nachricht" id="" cols="30" rows="9"></textarea>
+    <form class="contact-form" (ngSubmit)="onSubmit()">
+        <input [(ngModel)]="contactData.name" type="text" name="name" placeholder="Ihr Name" id="name">
+        <input [(ngModel)]="contactData.email" type="email" name="email" placeholder="Ihre E-Mail" id="email">
+        <textarea [(ngModel)]="contactData.message" type="text" name="message" placeholder="Ihre Nachricht" id="textarea" cols="30" rows="9"></textarea>
+        <button>Senden</button>
     </form>
 
 </section>
