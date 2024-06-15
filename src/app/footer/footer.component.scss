@@ -1,0 +1,35 @@
+@import '../../styles.scss';
+
+.section-styles {
+    height: 200px;
+    border-top: 4px solid $orange;
+    >span {
+        font-size: 23px;
+    }
+}
+
+.footer-left {
+    @include dFlex($ai: flex-start, $fd: column, $gap: 10px);
+    >img {
+        height: 40px;
+    }
+    >a {
+        border-bottom: 2px solid rgba(255, 255, 255, 0);
+        cursor: pointer;
+        &:hover {
+            border-bottom: 2px solid $red;
+        }
+    }
+}
+
+.footer-right {
+    @include dFlex($gap: 40px);
+    >img {
+        height: 40px;
+        transition: transform 0.25s ease-in-out;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.5);
+        }
+    } 
+}
