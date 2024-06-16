@@ -3,7 +3,18 @@
 .contact-title {
     width: 30%;
     height: 600px;
-    @include dFlex($jc: flex-start, $fd: column, $gap: 40px);
+    @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $gap: 40px);
+    >.title-and-border {
+        @include dFlex($jc: flex-start, $fd: row);
+    }
+}
+
+.border-left {
+    position: absolute;
+    left: 0;
+    height: 4px;
+    width: 80px;
+    background-color: $red;
 }
 
 .contact-form {
