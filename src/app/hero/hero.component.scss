@@ -27,12 +27,6 @@
     
     >.name-text {
         @include dFlex($fd:row);
-        >.name-title h1 {
-            font-size: 90px;
-            font-weight: bold;
-            line-height: 108px;
-            margin: 0;
-        }
         >.name-title h2 {
             font-size: 60px;
             line-height: 69px;
@@ -113,10 +107,7 @@
 
     .name {   
         >.name-text {
-            >.name-title h1 {
-                font-size: 70px;
-                line-height: 80px;
-            }
+
             >.name-title h2 {
                 font-size: 47px;
                 line-height: 47px;
