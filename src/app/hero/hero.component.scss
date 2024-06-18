@@ -77,8 +77,12 @@
                 }
             } 
         }
-        >span {
+        >a {
             font-size: 26px;
+            transition: 0.35s color;
+            &:hover {
+                color: $orange;
+            }
         }
     }
 }
@@ -86,9 +90,77 @@
 .social-border {
     height: 5px;
     width: 100px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
     background-color: $red;
 }
 
 .scroll-down {
     height: 180px;
+}
+
+
+@media screen and (max-width: 1600px) {
+    .hero {
+        height: 100vh;
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 0 100px;
+        box-sizing: border-box;
+        @include dFlex();
+    }
+
+    .name {   
+        >.name-text {
+            >.name-title h1 {
+                font-size: 70px;
+                line-height: 80px;
+            }
+            >.name-title h2 {
+                font-size: 47px;
+                line-height: 47px;
+            }
+            >.side-text {
+                font-size: 26px;
+            }
+        }
+    }
+
+    .person {
+        width: 100%;
+        >img {
+            position: absolute;
+            height: 500px;
+            margin-bottom: 240px;
+        }
+    }
+
+    .hero-shape {
+        top: 50%;
+    }
+    
+    .info {
+        position: absolute;
+        bottom: 20px;
+        right: 90px;
+        left: 0px;
+        @include dFlex($jc:space-between);
+        >.social {
+            @include dFlex($gap: 50px); 
+            >.icon-list {
+                @include dFlex($gap: 40px);
+                >img {
+                    height: 36px;
+                } 
+            }
+            >a {
+                font-size: 20px;
+            }
+        }
+    }
+    
+    .scroll-down {
+        height: 120px;
+    }
 }
