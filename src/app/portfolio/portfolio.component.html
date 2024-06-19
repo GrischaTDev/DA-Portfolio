@@ -1,23 +1,24 @@
-<section class="section-styles">
-
-    <div class="portfolio-title">
-        <div class="title-and-border">
-            <div class="border-left"></div>
-            <h2>Portfolio</h2>
-            <div class="border-right"></div>
+<section class="positon-relative">
+    <div class="section-styles">
+        <div class="portfolio-title">
+            <div class="title-and-border">
+                <div class="border-left"></div>
+                <h2>Portfolio</h2>
+                <div class="border-right"></div>
+            </div>
+            <span>Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.</span>
         </div>
-        <span>Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.</span>
-    </div>
-
-    <div class="portfolio-content" *ngFor="let portfolio of portfolio; let i = index"  [class.reverse]="i % 2 === 1">
-        <img class="portfolio-left" src="./assets/img/portfolio/{{ portfolio.image }}.svg" alt="">
-        <div class="portfolio-right">
-            <h3> {{ portfolio.name }} </h3>
-            <h4> {{ portfolio.skills }} </h4>
-            <span> {{ portfolio.description }} </span>
-            <div class="portfolio-buttons">
-                <button class="primary-btn">Live test</button>
-                <button class="secondary-btn">GitHub</button>
+    
+        <div class="portfolio-content" *ngFor="let portfolio of portfolio; let i = index"  [class.reverse]="i % 2 === 1">
+            <img class="portfolio-left" src="./assets/img/portfolio/{{ portfolio.image }}.svg" alt="">
+            <div class="portfolio-right">
+                <h3> {{ portfolio.name }} </h3>
+                <h4> {{ portfolio.skills }} </h4>
+                <span> {{ portfolio.description }} </span>
+                <div class="portfolio-buttons">
+                    <button class="primary-btn">Live test</button>
+                    <button class="secondary-btn">GitHub</button>
+                </div>
             </div>
         </div>
     </div>

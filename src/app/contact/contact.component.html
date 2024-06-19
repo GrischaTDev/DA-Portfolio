@@ -1,11 +1,11 @@
 <section class="section-styles">
 
     <div class="contact-title">
-        <div class="title-and-border">
-            <div class="border-left"></div>
+        <div class="contact-title-and-border">
+            <div class="contact-border-left"></div>
             <h2>Kontakt</h2>
         </div>
-        <div>
+        <div class="description">
             <h3>Haben Sie ein Problem zu lösen?</h3>
             <span>Kontaktieren Sie mich über dieses Formular. Ich freue mich darauf, von Ihnen zu hören, Ihre Ideen zu kennen und mit meiner Arbeit zu Ihren Projekten beizutragen.</span>
             <span>Brauchen Sie einen Frontend-Entwickler? Kontaktieren Sie mich!</span>
@@ -16,6 +16,11 @@
         <input [(ngModel)]="contactData.name" type="text" name="name" placeholder="Ihr Name" id="name">
         <input [(ngModel)]="contactData.email" type="email" name="email" placeholder="Ihre E-Mail" id="email">
         <textarea [(ngModel)]="contactData.message" type="text" name="message" placeholder="Ihre Nachricht" id="textarea" cols="30" rows="9"></textarea>
+        <div>
+            <input type="checkbox" id="datenschutz" name="datenschutz" value="asdasdasdasdassd">
+            <span>Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.</span>
+        </div>
+
         <button>Senden</button>
     </form>
 

@@ -14,13 +14,15 @@
         @include dFlex($fd: row, $gap: 40px);
 
         >.border-left {
+            border-radius: 50px;
             height: 5px;
             width: 80px;
             background-color: $red;
         }
 
         >.border-right {
-
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
             height: 5px;
             width: calc((100vw - 1920px) / 2 + 718px);
             right: 0;
@@ -77,17 +79,4 @@
     z-index: -10;
 }
 
-@media screen and (max-width: 1600px) {
-    .portfolio-buttons {
-        gap: 50px !important;
-    }
-
-    .border-left {
-        border-radius: 50px;
-    }
-
-    .border-right {
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
-    }
-}
+@import '../../responsive.scss';

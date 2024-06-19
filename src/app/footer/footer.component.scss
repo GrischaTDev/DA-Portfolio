@@ -1,6 +1,12 @@
 @import '../../styles.scss';
 
-.section-styles {
+footer {
+    width: 100%;
+    padding: 0 140px;
+    margin: 0 auto 300px auto;
+    position: relative;
+    box-sizing: border-box;
+    @include dFlex($jc: space-between);
     height: 200px;
     border-top: 4px solid $orange;
     >span {

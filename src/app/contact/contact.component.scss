@@ -4,17 +4,25 @@
     width: 30%;
     height: 600px;
     @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $gap: 40px);
-    >.title-and-border {
+    >.contact-title-and-border {
         @include dFlex($jc: flex-start, $fd: row);
+    }
+    >.description {
+        @include dFlex($ai: flex-start, $jc: flex-start, $fd: column, $gap: 20px);
+        >h3 {
+            color: white;
+        }
     }
 }
 
-.border-left {
+.contact-border-left {
     position: absolute;
     left: 0;
     height: 4px;
-    width: 80px;
+    width: 100px;
     background-color: $red;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .contact-form {

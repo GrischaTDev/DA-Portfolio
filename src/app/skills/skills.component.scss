@@ -52,17 +52,5 @@
 }
 
 
-@media screen and (max-width: 1600px) {
-    .skills-container {
-        display: flex;
-        gap: 50px;
-        flex-flow: initial;
-        flex-wrap: wrap;
-        max-width: 750px;
-        >.skill {
-            width: 120px;
-            @include dFlex($fd: column, $gap: 10px);
-        }
-    }
-}
+@import '../../responsive.scss';
 
