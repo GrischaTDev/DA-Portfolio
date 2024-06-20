@@ -12,16 +12,15 @@
         </div>
     </div>
 
-    <form class="contact-form" (ngSubmit)="onSubmit()">
-        <input [(ngModel)]="contactData.name" type="text" name="name" placeholder="Ihr Name" id="name">
-        <input [(ngModel)]="contactData.email" type="email" name="email" placeholder="Ihre E-Mail" id="email">
-        <textarea [(ngModel)]="contactData.message" type="text" name="message" placeholder="Ihre Nachricht" id="textarea" cols="30" rows="9"></textarea>
-        <div>
-            <input type="checkbox" id="datenschutz" name="datenschutz" value="asdasdasdasdassd">
+    <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" ngNativeValidate>
+        <input [(ngModel)]="contactData.name" type="text" name="name" placeholder="Ihr Name" id="name" required>
+        <input [(ngModel)]="contactData.email" type="email" name="email" placeholder="Ihre E-Mail" id="email" required>
+        <textarea [(ngModel)]="contactData.message" type="text" name="message" placeholder="Ihre Nachricht" id="textarea" cols="30" rows="9" required></textarea>
+        <div class="checkbox-container">
+            <input type="checkbox" id="datenschutz" name="datenschutz" value="">
             <span>Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.</span>
         </div>
-
-        <button>Senden</button>
+        <button class="primary-btn">Nachricht senden :)</button>
     </form>
 
 </section>

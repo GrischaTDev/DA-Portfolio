@@ -28,28 +28,46 @@
 .contact-form {
     margin-top: 100px;
     width: 70%;
+    max-width: 600px;
     @include dFlex($fd: column, $gap: 20px);
     >input {
-        width: 50%;
+        width: 100%;
         height: 40px;
         padding: 10px;
         border-radius: 10px;
         border-color: $red;
         background-color: unset;
+        color: white;
 
         &:hover {
             border-color: $orange;
         }
     }
     >textarea {
-        width: 50%;
+        width: 100%;
         padding: 10px;
         border-radius: 10px;
         border-color: $red;
         background-color: unset;
+        color: white;
 
         &:hover {
             border-color: $orange;
+        }
+    }
+    >.checkbox-container {
+        @include dFlex($ai: flex-start, $fd: row, $gap: 20px);
+        >input[type="checkbox"] {
+            cursor: pointer;
+            height: 30px;
+            width: 30px;
+            color: orange;
+        }
+        >input[type="checkbox"]:checked {
+            cursor: pointer;
+            height: 30px;
+            width: 30px;
+            color: orange;
         }
     }
 }
