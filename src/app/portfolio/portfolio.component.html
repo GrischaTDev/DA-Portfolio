@@ -1,4 +1,4 @@
-<section class="positon-relative">
+<section class="positon-relative" id="portfolio">
     <div class="section-styles">
         <div class="portfolio-title">
             <div class="title-and-border">
@@ -16,8 +16,8 @@
                 <h4> {{ portfolio.skills }} </h4>
                 <span> {{ portfolio.description }} </span>
                 <div class="portfolio-buttons">
-                    <button class="primary-btn">Live test</button>
-                    <button class="secondary-btn">GitHub</button>
+                    <a target="_blank" href="{{ portfolio.test }}"><button class="primary-btn">Live test</button></a>
+                    <a target="_blank" href="{{ portfolio.gitHub }}"><button class="secondary-btn">GitHub</button></a>
                 </div>
             </div>
         </div>

@@ -53,7 +53,6 @@
 }
 
 .info {
-    max-width: 1920px;
     position: absolute;
     bottom: 20px;
     right: 90px;
@@ -63,7 +62,7 @@
         @include dFlex($gap: 50px); 
         >.icon-list {
             @include dFlex($gap: 40px);
-            >img {
+            >a img {
                 height: 46px;
                 transition: transform 0.25s ease-in-out;
                 &:hover {
