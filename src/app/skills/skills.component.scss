@@ -43,6 +43,12 @@
         width: 100%;
         @include dFlex();
     }
+
+    >.skills-btn-mobile {
+        display: none;
+        width: 100%;
+        @include dFlex();
+    }
 }
 
 .skills-shape {

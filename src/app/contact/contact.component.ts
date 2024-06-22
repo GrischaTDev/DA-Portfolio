@@ -22,7 +22,7 @@ export class ContactComponent {
   mailTest = false;
 
   post = {
-    endPoint: 'https://grischa-taenzer.developerakademie.net/sendMail.php',
+    endPoint: 'https://portfolio.grischataenzer.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

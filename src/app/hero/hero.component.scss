@@ -37,7 +37,9 @@
         }
         >.side-text {
             font-size: 42px;
-            display: inline-block;
+            margin: -20px;
+            height: auto;
+            width: 100px;
             transform: rotate(-90deg);
         }
     }

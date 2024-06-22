@@ -1,4 +1,4 @@
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1700px) {
 
     /********** ABOUT ME **********/
     .border {
@@ -33,7 +33,7 @@
     }
 }
 
-@media screen and (max-width: 1700px) {
+@media screen and (min-width: 1400px) {
 
     /********** GLOBAL **********/
     h1,
@@ -181,7 +181,7 @@
     }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (min-width: 1001px) {
 
     /********** GLOBAL **********/
     h1,
@@ -331,15 +331,30 @@
 
 @media screen and (max-width: 1000px) {
 
+    /********** HEADER **********/
+    header {
+        padding: 20px;
+        >img {
+            height: 35px;
+        }
+        >nav {
+            display: none;
+        }
+        >.mobile-menu {
+            display: block;
+            cursor: pointer;
+        }
+    }
+
     /********** GLOBAL **********/
     h1,
     h2 {
-        font-size: 60px;
-        line-height: 70px;
+        font-size: 40px;
+        line-height: 60px;
     }
 
     h3 {
-        font-size: 32px;
+        font-size: 20px;
     }
 
     h4 {
@@ -347,15 +362,17 @@
     }
 
     .section-styles {
-        padding: 0 140px;
-        margin: 0 auto 200px auto;
+        max-width: unset;
+        padding: 0 30px;
+        margin: 0 auto 150px auto;
+        z-index: 10;
     }
 
     .primary-btn {
         width: auto;
-        padding: 15px 25px;
+        padding: 15px 20px;
         font-size: 20px;
-        line-height: 27.6px;
+        line-height: 20px;
 
         &:hover {
             cursor: pointer;
@@ -368,23 +385,27 @@
     .hero {
         height: 100vh;
         width: 100%;
-        max-width: 1920px;
+        max-width: unset;
         margin: 0 auto;
-        padding: 0 100px;
+        padding: 0 20px;
         box-sizing: border-box;
-        @include dFlex();
+        @include dFlex($fd: column, $gap: 230px);
     }
 
     .name {
+        margin-bottom: 0px;
+        gap: 25px;
         >.name-text {
-
             >.name-title h2 {
-                font-size: 40px;
-                line-height: 47px;
+                font-size: 27px;
+                line-height: 27px;
             }
 
             >.side-text {
-                font-size: 26px;
+                font-size: 20px;
+                margin: -20px;
+                height: auto;
+                width: 80px;
             }
         }
     }
@@ -394,8 +415,8 @@
 
         >img {
             position: absolute;
-            height: 500px;
-            margin-bottom: 240px;
+            height: 400px;
+            margin-bottom: -80px;
         }
     }
 
@@ -414,29 +435,28 @@
             @include dFlex($gap: 50px);
 
             >.icon-list {
-                @include dFlex($gap: 40px);
-
-                >img {
-                    height: 36px;
+                @include dFlex($gap: 30px);
+                >a img {
+                    height: 40px;
                 }
             }
-
             >a {
-                font-size: 20px;
+                display: none;
             }
         }
     }
 
+    .social-border {
+        width: 65px;
+    }
+
     .scroll-down {
-        height: 120px;
+       display: none;
     }
 
     /********** ABOUT ME **********/
     .kreis-foto {
-        position: absolute;
-        right: 0;
-        @include dFlex();
-
+        display: none;
         >img {
             height: 400px;
         }
@@ -448,31 +468,97 @@
         }
     }
 
+    .about-shape {
+        position: absolute;
+        height: 80%;
+        right: 0;
+        bottom: 20px;
+        z-index: 1;
+    }
+
     /********** SKILLS **********/
+    #skills .section-styles {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     .skills-container {
         display: flex;
-        gap: 50px;
-        flex-flow: initial;
-        flex-wrap: wrap;
-        max-width: 750px;
+        justify-content: center;
+        gap: 30px;
 
         >.skill {
-            width: 120px;
+            width: 80px;
             @include dFlex($fd: column, $gap: 10px);
         }
     }
 
+    .my-skills-right {
+        @include dFlex($ai:flex-end, $fd:column, $gap: 30px);
+        padding: 0;
+        margin-bottom: 80px;
+        width: unset;
+        text-align: right;
+        >.skills-title {
+            >.skills-border {
+                width: 20px;
+            }
+        }
+    
+        >.skills-btn {
+            display: none;
+        }
+
+        >.skills-btn-mobile {
+            display: block;
+            width: 100%;
+            @include dFlex();
+        }
+    }
+
     /********** PORTFOLIO **********/
-    .portfolio-buttons {
-        gap: 50px !important;
+
+    .portfolio-title {
+        text-align: center;
+
+        >.title-and-border {
+            gap: 0;
+            position: unset;
+            >.border-left {
+                position: absolute;
+                left: 0;
+                width: 60px;
+            }
+            >.border-right {
+                display: none;
+            }
+        }
+
+        >span {
+            padding-top: 0px;
+        }
     }
 
-    .border-left {
-        border-radius: 50px;
-    }
+    .portfolio-content {
+        width: 100%;
+        margin-top: 120px;
+        @include dFlex($fd: column, $gap: 0px);
+    
+        >.portfolio-left {
+            margin: 0;
+            height: 350px;
+        }
+    
+        >.portfolio-right {
+            width: 100%;
+            text-align: center;
+            @include dFlex($ai: center, $fd: column, $gap: 10px);
 
-    .border-right {
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
+            >.portfolio-buttons {
+                margin-top: 30px;
+                display: flex;
+                gap: 100px;
+            }
+        }
     }
 }
