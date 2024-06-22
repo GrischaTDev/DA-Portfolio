@@ -17,9 +17,12 @@
         <input [(ngModel)]="contactData.email" type="email" name="email" placeholder="Ihre E-Mail" id="email" required>
         <textarea [(ngModel)]="contactData.message" type="text" name="message" placeholder="Ihre Nachricht" id="textarea" cols="30" rows="9" required></textarea>
         <div class="checkbox-container">
-            <input type="checkbox" id="datenschutz" name="datenschutz" value="">
+            <div (click)="checkboxConfirm()" class="checkbox">
+                <img [src]="checkboxSrc">
+            </div>
             <span>Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.</span>
         </div>
+        <div class="checkbox-msg" [ngClass]="{'d-none': !checkboxDisplay}">Bestätigen Sie die Datenschutzerklärung!</div>
         <button class="primary-btn">Nachricht senden :)</button>
     </form>
 

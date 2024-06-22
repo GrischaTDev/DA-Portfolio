@@ -1,6 +1,10 @@
 @import '../../styles.scss';
 
 footer {
+    position: relative;
+}
+
+.desktop-footer {
     width: 100%;
     padding: 0 140px;
     margin: 0 auto 300px auto;
@@ -12,6 +16,10 @@ footer {
     >span {
         font-size: 23px;
     }
+}
+
+.mobile-footer {
+    display: none;
 }
 
 .footer-left {
@@ -39,3 +47,17 @@ footer {
         }
     } 
 }
+
+.go-up-btn {
+    position: absolute;
+    right: 50px;
+    bottom: 260px;
+    cursor: pointer;
+}
+
+footer img:hover {
+    height: 40px;
+    content: url("../../assets/img/go-up-hover.svg");
+}
+
+@import '../../responsive.scss';

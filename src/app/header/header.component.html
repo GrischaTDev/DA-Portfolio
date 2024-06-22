@@ -1,9 +1,12 @@
 <header>
     <img src="./assets/img/logo.svg" alt="Grischa Logo">
-    <nav>
-        <a href="#aboute-me">Über mich</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
+
+    <nav [ngClass]="{'mobile-nav': mobileMenu}">
+        <a (click)="closeMobileMenu()" href="#aboute-me">Über mich</a>
+        <a (click)="closeMobileMenu()" href="#skills">Skills</a>
+        <a (click)="closeMobileMenu()" href="#portfolio">Portfolio</a>
+        <a (click)="closeMobileMenu()" href="#contact">Kontakt</a>
     </nav>
-    <img class="mobile-menu" src="./assets/img/burger-menu.svg" alt="Grischa Logo">
+
+    <img (click)="openMobileMenu()" class="mobile-menu" [src]="burgerMenu" alt="Grischa Logo">
 </header>

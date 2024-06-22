@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+  constructor(private readonly viewportScroller: ViewportScroller) {}
 
+  backToStart() {
+    this.viewportScroller.scrollToPosition([0, 0]);
+  }
 }

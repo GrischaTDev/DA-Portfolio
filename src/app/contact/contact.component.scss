@@ -57,17 +57,18 @@
     }
     >.checkbox-container {
         @include dFlex($ai: flex-start, $fd: row, $gap: 20px);
-        >input[type="checkbox"] {
+        >.checkbox {
             cursor: pointer;
-            height: 30px;
-            width: 30px;
-            color: orange;
-        }
-        >input[type="checkbox"]:checked {
-            cursor: pointer;
-            height: 30px;
-            width: 30px;
-            color: orange;
+            padding: 5px;
+            >img {
+                height: 25px;
+            }
         }
     }
+    >.checkbox-msg {
+        text-align: left;
+        color: $red;
+    }
 }
+
+@import '../../responsive.scss';

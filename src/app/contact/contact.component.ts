@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
@@ -5,11 +6,14 @@ import { FormsModule, NgForm } from '@angular/forms';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+  checkbox: boolean = false;
+  checkboxDisplay: boolean = false;
+  checkboxSrc = './assets/img/checkbox1.svg';
 
   http = inject(HttpClient)
 
@@ -33,7 +37,7 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (this.checkbox && ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -46,9 +50,18 @@ export class ContactComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
       ngForm.resetForm();
+    } else {
+      this.checkboxDisplay = true;
+      console.log('Checkbox False');
     }
+  }
+
+  checkboxConfirm() {
+    this.checkboxDisplay = false;
+    this.checkbox = !this.checkbox;
+    this.checkboxSrc = this.checkbox ? './assets/img/checkbox2.svg' : './assets/img/checkbox1.svg';
+    console.log('Checkbox true');
   }
 
 }
