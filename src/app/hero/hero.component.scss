@@ -5,7 +5,9 @@
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
+    padding:  0 100px;
     @include dFlex();
+    box-sizing: border-box;
 }
 
 .person {
@@ -15,21 +17,19 @@
     >img {
         position: absolute;
         height: 800px;
-        margin-bottom: 240px;
     }
 }
 
 .name {
     width: 100%;
-    margin-bottom: 240px;
     z-index: 100;
     @include dFlex($fd:column, $gap: 50px);
     
     >.name-text {
         @include dFlex($fd:row);
         >.name-title h2 {
-            font-size: 60px;
-            line-height: 69px;
+            font-size: 55px;
+            line-height: 55px;
             font-weight: 400;
             text-transform: uppercase;
             color: $red;
