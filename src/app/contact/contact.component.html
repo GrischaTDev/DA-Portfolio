@@ -26,4 +26,8 @@
         <button class="primary-btn">Nachricht senden :)</button>
     </form>
 
+    <div class="formSendMsg" [ngClass]="{'d-none': !formSend}">
+        <h2>Ihre Nachricht wurde versendet<span>!</span></h2>
+    </div>
+
 </section>

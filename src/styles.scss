@@ -31,7 +31,7 @@ body {
 }
 
 .d-none {
-  display: none;
+  display: none !important;
 }
 
 h1, h2 {
@@ -115,6 +115,26 @@ a {
       background-color: $orange;
 
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(203, 203, 203);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $red;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $orange;
 }
 
 @import './responsive.scss';

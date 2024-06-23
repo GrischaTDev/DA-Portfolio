@@ -28,7 +28,7 @@
 .contact-form {
     margin-top: 100px;
     width: 70%;
-    max-width: 700px;
+    max-width: 600px;
     @include dFlex($fd: column, $gap: 20px);
     >input {
         width: 100%;
@@ -69,6 +69,29 @@
     }
     >.checkbox-msg {
         text-align: left;
+        color: $red;
+    }
+}
+
+.formSendMsg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(43, 43, 43, 0.861);
+    z-index: 999;
+    text-align: center;
+    >h2 {
+       font-size: 36px;
+       line-height: 36px;
+       margin: 0;
+       border-bottom: solid 4px $red; 
+    }
+    >h2 span {
         color: $red;
     }
 }

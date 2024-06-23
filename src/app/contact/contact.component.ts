@@ -14,15 +14,13 @@ export class ContactComponent {
   checkbox: boolean = false;
   checkboxDisplay: boolean = false;
   checkboxSrc = './assets/img/checkbox1.svg';
-
+  formSend: boolean = false;
   http = inject(HttpClient)
-
   contactData = {
     name: '',
     email: '',
     message: ''
   }
-
   mailTest = false;
 
   post = {
@@ -41,7 +39,10 @@ export class ContactComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
+            this.formSend = true;
+            setTimeout(() => {
+              this.formSend = false; 
+            }, 3000);
             ngForm.resetForm();
           },
           error: (error) => {
@@ -63,5 +64,4 @@ export class ContactComponent {
     this.checkboxSrc = this.checkbox ? './assets/img/checkbox2.svg' : './assets/img/checkbox1.svg';
     console.log('Checkbox true');
   }
-
 }
