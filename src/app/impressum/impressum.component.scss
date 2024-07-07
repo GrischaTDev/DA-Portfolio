@@ -2,7 +2,7 @@
 
 .impressum-text {
     width: 100%;
-    height: 100vh;
+    height: calc(100% - 204px);
     text-align: center;
     @include dFlex($fd: column, $gap: 50px);
 }

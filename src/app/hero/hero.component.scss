@@ -56,9 +56,9 @@
 
 .info {
     position: absolute;
+    max-width: 1650px;
+    width: 100%;
     bottom: 20px;
-    right: 90px;
-    left: 0px;
     @include dFlex($jc:space-between);
     >.social {
         @include dFlex($gap: 50px); 

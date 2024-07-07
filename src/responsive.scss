@@ -108,6 +108,10 @@
         top: 55%;
     }
 
+    .info {
+        margin-right: 40px;
+    }
+
     /********** ABOUT ME **********/
     .kreis-foto {
         position: absolute;
@@ -152,6 +156,11 @@
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;
     }
+
+    /**** FOOTER ****/ 
+    footer {
+        padding: 0 140px;
+    }
 }
 
 @media screen and (max-width: 1450px) {
@@ -181,6 +190,10 @@
                 line-height: 47px;
             }
         }
+    }
+
+    .info {
+        margin-right: 60px;
     }
 
     /******** */
@@ -276,8 +289,7 @@
     .info {
         position: absolute;
         bottom: 20px;
-        right: 90px;
-        left: 0px;
+        margin-right: 60px;
         @include dFlex($jc: space-between);
 
         >.social {
@@ -369,6 +381,10 @@
 
     /********** HEADER **********/
     header {
+        height: 75px;
+    }
+
+    header div {
         padding: 20px;
 
         >img {
@@ -687,7 +703,6 @@
         box-sizing: border-box;
         @include dFlex($jc: center, $fd: column, $gap: 40px);
         height: 400px;
-        border-top: 4px solid $orange;
 
         >img {
             height: 50px;
@@ -705,7 +720,7 @@
 
     .go-up-btn {
         position: absolute;
-        right: 50px;
+        right: -90px;
         bottom: 420px;
         cursor: pointer;
     }
