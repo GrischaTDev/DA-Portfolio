@@ -1,5 +1,5 @@
 <section class="positon-relative" id="portfolio">
-    <div class="section-styles">
+    <div class="section-styles" data-aos="fade-down">
         <div class="portfolio-title">
             <div class="title-and-border">
                 <div class="border-left"></div>
@@ -9,7 +9,7 @@
             <span>Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.</span>
         </div>
     
-        <div data-aos="fade-right" class="portfolio-content" *ngFor="let portfolio of portfolio; let i = index"  [class.reverse]="i % 2 === 1">
+        <div  class="portfolio-content" *ngFor="let portfolio of portfolio; let i = index"  [class.reverse]="i % 2 === 1">
             <img class="portfolio-left" src="./assets/img/portfolio/{{ portfolio.image }}.svg" alt="">
             <div class="portfolio-right">
                 <h3> {{ portfolio.name }} </h3>

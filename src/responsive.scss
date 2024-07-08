@@ -53,11 +53,6 @@
         font-size: 23px;
     }
 
-    // .section-styles {
-    //     padding: 0 140px;
-    //     margin: 0 auto 200px auto;
-    // }
-
     .primary-btn {
         width: auto;
         padding: 15px 25px;
@@ -71,13 +66,26 @@
         }
     }
 
+    .section-styles {
+        padding: 150px 80px;
+    }
+
+    .skills-border, .contact-border-left {
+        width: 50px !important;
+    }
+
+    /********** HEADER **********/
+    header {
+        padding: 0 80px;
+    }
+
     /********** HERO **********/
     .hero {
         height: 100vh;
         width: 100%;
         max-width: 1920px;
+        padding: 0 80px;
         margin: 0 auto;
-        padding: 0 100px;
         box-sizing: border-box;
         @include dFlex();
     }
@@ -109,7 +117,8 @@
     }
 
     .info {
-        margin-right: 40px;
+        padding: 0 80px;
+        box-sizing: border-box;
     }
 
     /********** ABOUT ME **********/
@@ -158,8 +167,8 @@
     }
 
     /**** FOOTER ****/ 
-    footer {
-        padding: 0 140px;
+    .desktop-footer {
+        padding: 80px;
     }
 }
 
@@ -172,13 +181,18 @@
         line-height: 80px;
     }
 
+        /********** HEADER **********/
+        header {
+            padding: 0 80px;
+        }
+
     /********** HERO **********/
     .hero {
         height: 100vh;
         width: 100%;
         max-width: 1920px;
         margin: 0 auto;
-        padding: 0 40px;
+        padding: 0 80px;
         box-sizing: border-box;
         @include dFlex();
     }
@@ -193,8 +207,9 @@
     }
 
     .info {
-        margin-right: 60px;
+        padding: 0 80px;
     }
+
 
     /******** */
     .portfolio-content {
@@ -223,8 +238,8 @@
     /********** GLOBAL **********/
     h1,
     h2 {
-        font-size: 60px;
-        line-height: 70px;
+        font-size: 50px;
+        line-height: 60px;
     }
 
     h3 {
@@ -254,7 +269,6 @@
         width: 100%;
         max-width: 1920px;
         margin: 0 auto;
-        padding: 0 20px;
         box-sizing: border-box;
         @include dFlex();
     }
@@ -263,12 +277,14 @@
         >.name-text {
 
             >.name-title h2 {
-                font-size: 40px;
+                font-size: 34px;
                 line-height: 47px;
             }
 
             >.side-text {
                 font-size: 26px;
+                width: 90px;
+                margin: -20px;
             }
         }
     }
@@ -289,7 +305,6 @@
     .info {
         position: absolute;
         bottom: 20px;
-        margin-right: 60px;
         @include dFlex($jc: space-between);
 
         >.social {
@@ -379,16 +394,29 @@
 /**************** MOBILE **************/
 @media screen and (max-width: 1090px) {
 
+    .skills-border {
+        width: 20px !important;
+    }
+
+    .social-border {
+        display: none;
+    }
+
+    /***** SHAPES ******/
+    .portfolio-shape, .portfolio-shape2, .skills-shape, .about-shape {
+        display: none;
+    }
+
     /********** HEADER **********/
     header {
         height: 75px;
+        padding: 20px;
     }
 
     header div {
-        padding: 20px;
 
         >img {
-            height: 35px;
+            height: 30px;
         }
 
         >nav {
@@ -466,6 +494,9 @@
         @include dFlex($fd: column, $gap: 40px);
     }
 
+    .name-box {
+        justify-content: center;
+    }
 
     .name {
         margin-bottom: 160px;
@@ -506,7 +537,7 @@
         bottom: 20px;
         right: 90px;
         left: 0px;
-        @include dFlex($jc: space-between);
+        @include dFlex($jc: center);
 
         >.social {
             @include dFlex($gap: 50px);
@@ -694,6 +725,10 @@
         display: none;
     }
 
+    footer {
+        padding: 0;
+    }
+
     .mobile-footer {
         display: block;
         width: 100%;
@@ -720,7 +755,7 @@
 
     .go-up-btn {
         position: absolute;
-        right: -90px;
+        right: 20px;
         bottom: 420px;
         cursor: pointer;
     }
@@ -739,7 +774,7 @@
 
 
     .name {
-        margin-bottom: 160px;
+        margin-bottom: 120px;
         gap: 25px;
 
         >.name-text {
@@ -760,11 +795,14 @@
     .person {
         height: 100%;
         width: 100%;
+        
 
         >img {
             position: absolute;
-            width: 90%;
+            margin-top: 80px;
+            width: 100%;
             margin-bottom: -120px;
+            height: 300px;
         }
     }
 

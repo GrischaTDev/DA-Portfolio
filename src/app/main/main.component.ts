@@ -22,6 +22,8 @@ import 'aos/dist/aos.css';
 })
 export class MainComponent implements OnInit {
   ngOnInit(){
-    AOS.init();
+    AOS.init({
+      disable: "mobile"
+    });
    }
 }

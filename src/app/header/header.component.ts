@@ -24,5 +24,6 @@ export class HeaderComponent {
 
   closeMobileMenu() {
     this.mobileMenu = false;
+    this.burgerMenu = './assets/img/burger-menu.svg';
   }
 }

@@ -59,6 +59,12 @@ h4 {
 a {
   text-decoration: none;
   color: $fonts;
+
+}
+a {
+  text-decoration: none;
+  color: $fonts;
+
 }
 
 .positon-relative {
@@ -136,5 +142,8 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: $orange;
 }
+
+
+
 
 @import './responsive.scss';
