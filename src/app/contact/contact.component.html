@@ -1,6 +1,6 @@
 <section class="section-styles" id="contact">
 
-    <div class="contact-title">
+    <div class="contact-title" data-aos="fade-right">
         <div class="contact-title-and-border">
             <div class="contact-border-left"></div>
             <h2>Kontakt</h2>
@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" ngNativeValidate>
+    <form data-aos="fade-left" class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" ngNativeValidate>
         <input [(ngModel)]="contactData.name" type="text" name="name" placeholder="Ihr Name" id="name" required>
         <input [(ngModel)]="contactData.email" type="email" name="email" placeholder="Ihre E-Mail" id="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
         <textarea [(ngModel)]="contactData.message" type="text" name="message" placeholder="Ihre Nachricht" id="textarea" cols="30" rows="9" required></textarea>

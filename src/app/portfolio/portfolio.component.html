@@ -9,7 +9,7 @@
             <span>Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.</span>
         </div>
     
-        <div class="portfolio-content" *ngFor="let portfolio of portfolio; let i = index"  [class.reverse]="i % 2 === 1">
+        <div data-aos="fade-right" class="portfolio-content" *ngFor="let portfolio of portfolio; let i = index"  [class.reverse]="i % 2 === 1">
             <img class="portfolio-left" src="./assets/img/portfolio/{{ portfolio.image }}.svg" alt="">
             <div class="portfolio-right">
                 <h3> {{ portfolio.name }} </h3>
